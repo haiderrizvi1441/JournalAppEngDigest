@@ -2,19 +2,16 @@ package com.hr.JournalApplicationEngDigest.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.naming.Name;
 
 @Entity
 @Table(name="Users")
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class User {
 
     @Id

@@ -7,13 +7,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
 public class UserRequest {
 
 
-    private String Username;
-    private String Useremail;
-    private String Userpassword;
+    private String name;
+    private String email;
+    private String password;
 }
