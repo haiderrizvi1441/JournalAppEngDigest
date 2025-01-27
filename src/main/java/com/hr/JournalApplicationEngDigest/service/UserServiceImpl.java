@@ -18,12 +18,8 @@ public class UserServiceImpl implements UserService{
     public String addUser(UserRequest userRequest) {
 
         // Create User using UserRequest
-        User myUser = User.builder()
-                .UserName(userRequest.getUsername())
-                .UserEmail(userRequest.getUseremail())
-                .UserPassword(userRequest.getUserpassword())
-                .build();
-        User newUser = new User("Haider","h@gmail.com","1234");
+
+        User newUser = new User("Test User","testuser123@testmail.com","1234");
         // Add User to repo
         userRepository.save(newUser);
 
