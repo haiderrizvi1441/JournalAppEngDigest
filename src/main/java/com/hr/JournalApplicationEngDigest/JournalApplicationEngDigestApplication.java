@@ -9,6 +9,7 @@ public class JournalApplicationEngDigestApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JournalApplicationEngDigestApplication.class, args);
 		System.out.println("Journal Application By Engineering Digest is working fine");
+		System.out.println("Added Feature");
 		System.out.println("Changes Done in Master Branch after feature1");
 	}
 
