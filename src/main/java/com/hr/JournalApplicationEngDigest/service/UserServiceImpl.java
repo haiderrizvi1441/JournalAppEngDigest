@@ -1,13 +1,13 @@
 package com.hr.JournalApplicationEngDigest.service;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.hr.JournalApplicationEngDigest.entity.User;
 import com.hr.JournalApplicationEngDigest.model.UserLoginRequest;
 import com.hr.JournalApplicationEngDigest.model.UserRequest;
-import com.hr.JournalApplicationEngDigest.model.UserResponse;
 import com.hr.JournalApplicationEngDigest.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -47,5 +47,27 @@ public class UserServiceImpl implements UserService{
         else{
             return "FAILED";
         }
+
+
     }
+
+
+    @Override
+    public String deleteUser(Integer id) {
+        
+        User myUser = userRepository.findById(id).get();
+        if(myUser == null){
+            return "USER DOES NOT EXIST";
+        }
+        try{
+            userRepository.delete(myUser);
+        }
+        catch(Exception e){
+
+        }
+        return "USER DELETED SUCCESSFULLY";
+    }
+
+
+    
 }

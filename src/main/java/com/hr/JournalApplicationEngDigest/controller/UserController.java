@@ -31,12 +31,18 @@ public class UserController {
 
 
 
-
     @PostMapping("/login")
     public ResponseEntity<String> loginUser(@RequestBody UserLoginRequest userLoginRequest){
         String loginMessage = userService.userLogin(userLoginRequest);
         
         return new ResponseEntity<>(loginMessage, HttpStatus.ACCEPTED);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable Integer id){
+        String deleteMessage = userService.deleteUser(id);
+
+        return new ResponseEntity<>(deleteMessage, HttpStatus.OK);
     }
 
     

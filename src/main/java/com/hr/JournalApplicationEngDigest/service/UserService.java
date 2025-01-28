@@ -8,4 +8,7 @@ public interface UserService {
     String addUser(UserRequest userRequest);
 
     String userLogin(UserLoginRequest userLogin);
+
+    String deleteUser(Integer id);
+
 }
