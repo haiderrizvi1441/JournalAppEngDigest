@@ -2,11 +2,14 @@ package com.hr.JournalApplicationEngDigest.service;
 
 import com.hr.JournalApplicationEngDigest.model.UserLoginRequest;
 import com.hr.JournalApplicationEngDigest.model.UserRequest;
-import com.hr.JournalApplicationEngDigest.model.UserResponse;
 
 public interface UserService {
 
     String addUser(UserRequest userRequest);
 
-    String loginUser(UserLoginRequest userLogin)
+    String userLogin(UserLoginRequest userLoginRequest);
+
+    String deleteUser(Integer id);
+
+
 }
