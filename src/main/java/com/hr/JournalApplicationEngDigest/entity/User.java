@@ -22,18 +22,18 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int UserId;
+    private int id;
 
     @Column(name = "name")
-    private String UserName;
+    private String name;
 
     @Column(name = "email")
-    private String UserEmail;
+    private String email;
 
     @Column(name = "password")
-    private String UserPassword;
+    private String password;
 
-    public User(String name,String email, String password){}
+
 
 
 }

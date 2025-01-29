@@ -21,9 +21,9 @@ public class UserServiceImpl implements UserService{
 
         // Create User using UserRequest
         User myUser = User.builder()
-                .UserName(userRequest.getName())
-                .UserEmail(userRequest.getEmail())
-                .UserPassword(userRequest.getPassword())
+                .name(userRequest.getName())
+                .email(userRequest.getEmail())
+                .password(userRequest.getPassword())
                 .build();
         // User newUser = new User("Test User","testuser123@testmail.com","1234");
         // Add User to repo
@@ -41,7 +41,7 @@ public class UserServiceImpl implements UserService{
         if(user==null){
             return "USER NOT FOUND";
         }
-        if(user.getUserPassword() == userLoginRequest.getPassword()){
+        if(user.getPassword() == userLoginRequest.getPassword()){
             return "SUCCESS";
         }
         else{
